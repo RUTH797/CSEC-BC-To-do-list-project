@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tasks"></i> Todo List App</h1>
+            <p class="subtitle">A simple app to manage your daily tasks</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <input type="text" id="todoInput" placeholder="Enter a new task...">
+                <button id="addBtn">Add Todo</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalTodos">0</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="completedTodos">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="pendingTodos">0</div>
+                    <div class="stat-label">Pending</div>
+                </div>
+            </div>
+
+            <div class="todo-list-container" id="todoContainer">
+                <h2 class="section-title"><i class="fas fa-list-check"></i> Your Tasks</h2>
+                <div id="noTodosMessage">
+                    <i class="fas fa-clipboard-list" style="font-size: 3rem; margin-bottom: 15px; color: #ccc;"></i>
+                    <p>No tasks yet. Add a task above to get started!</p>
+                </div>
+                <ul id="todoList"></ul>
+            </div>
+
+            <div class="clear-section">
+                <button id="clearAllBtn">Clear All Tasks</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Todo List App &copy; 2025</p>
+        </footer>
+    </div>
+
+    <div id="deleteNotification" class="notification">
+        <i class="fas fa-trash"></i>
+        <span>Task deleted successfully</span>
+    </div>
+</body>
+
+</html>
